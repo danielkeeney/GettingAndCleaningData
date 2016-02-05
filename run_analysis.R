@@ -3,6 +3,11 @@ run_analysis <- function() {
   run_analysis.setup()
   allData <- run_analysis.load()
   meanAndStd <- run_analysis.filter(allData)
+  tidyData <- run_analysis.makeTidy(meanAndStd)
+}
+
+run_analysis.makeTidy <- function(meanAndStd) {
+  meanAndStd %>% group_by(subject, activity) %>% summarize_each(funs(mean))
 }
 
 run_analysis.filter <- function(allData) {
@@ -50,4 +55,5 @@ run_analysis.setup <- function() {
 
 run_analysis.libraries <- function() {
   library(data.table)
+  library(dplyr)
 }

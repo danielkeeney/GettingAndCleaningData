@@ -4,6 +4,9 @@
 ### Overview
 **run_analysis.R** is a single script with several functions which performs the tasks described by the Getting and Cleaning Data course project.  The functions are:
 
+#### run_analysis
+This calls all the subsequent functions in the correct order, and returns the tidy data set.  This is the main entry point for this script.
+
 #### run_analysis.libraries
 This loads the required libraries which are needed later.
 

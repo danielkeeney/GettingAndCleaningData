@@ -11,7 +11,7 @@ run_analysis.makeTidy <- function(meanAndStd) {
 }
 
 run_analysis.filter <- function(allData) {
-  subset(allData, select = grepl("mean|std|^subject$|^activity$", names(allData)))
+  subset(allData, select = grepl("[mM]ean|[sS]td|^subject$|^activity$", names(allData)))
 }
 
 run_analysis.load <- function() {
